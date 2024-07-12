@@ -1,0 +1,5 @@
+--pink: #ffc5caff;
+--lavender-blush: #f6e8eaff;
+--licorice: #22181cff;
+--rosewood: #5a0001ff;
+--night: #110f0fff;
