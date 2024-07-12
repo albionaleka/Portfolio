@@ -36,14 +36,14 @@
             <br><br>
             I am currently seeking a new opportunity to continue my education and develop my skills in software development.
             <br><br>
-            I am open to discussing opportunities, projects, and career growth with anyone interested in software development. Feel free to reach out to me via <a href="mailto:albionaleka@gmail.com" class="pink">Email</a>.
+            I am open to discussing opportunities, projects, and career growth with anyone interested in software development. Feel free to reach out to me via <a href="mailto:albionaleka@gmail.com" class="pink"><b>Email</b></a>.
             <br><br>
             Thanks for taking the time to read about me!
             <br><br>
             <span class="pink"><b>- Albiona Leka</b></span>
             <br><br>
             <a href="{% static "cv/Albiona_Leka.pdf" %}" class="btn justify resume" target="_blank" download>My Resume</a>
-            <a href="#projects" class="btn justify resume">Projects</a>
+            <a href="{% url 'projects' %}" class="btn justify resume">Projects</a>
         </p>
     </div>
 </div>
@@ -102,11 +102,11 @@
             <div class="col-sm-4 mb-3 mb-sm-0 d-flex justify-content-center align-items-center">
             
                 <div class="card card-no-bg d-flex justify-content-center align-items-center" style="width: 18rem;">
-                    <img src="{% static "img/project1.svg" %}" class="card-img-top project-pic" alt="...">
+                    <img src="{% static "img/crm_1.jpeg" %}" class="card-img-top project-pic rounded" alt="...">
                     <div class="card-body">
                     <h5 class="card-title pink">CRM APP</h5>
                     <p class="card-text justify white">CRM app, that meets CRUD criteria. Technologies used: Django, HTML, Bootstrap, MySQL.</p>
-                    <a href="#" class="btn bg-pink">GitHub</a>
+                    <a href="https://github.com/albionaleka/django-crm" target="_blank" class="btn bg-pink">GitHub</a>
                     </div>
                 </div>
 
@@ -115,11 +115,11 @@
             <div class="col-sm-4 mb-3 mb-sm-0 d-flex justify-content-center align-items-center">
             
                 <div class="card card-no-bg d-flex justify-content-center align-items-center" style="width: 18rem;">
-                    <img src="{% static "img/project2.png" %}" class="card-img-top project-pic" alt="...">
+                    <img src="{% static "img/timetable_1.png" %}" class="card-img-top project-pic rounded" alt="...">
                     <div class="card-body">
                     <h5 class="card-title pink">TIMETABLE</h5>
                     <p class="card-text justify white">An app used to create students' timetables from a .csv file. Technologies used: Python and CustomTkinter.</p>
-                    <a href="#" class="btn bg-pink text-center">GitHub</a>
+                    <a href="https://github.com/albionaleka/Timetable" target="_blank" class="btn bg-pink text-center">GitHub</a>
                     </div>
                 </div>
 
@@ -128,11 +128,11 @@
             <div class="col-sm-4 mb-3 mb-sm-0 d-flex justify-content-center align-items-center">
 
                 <div class="card card-no-bg d-flex justify-content-center align-items-center" style="width: 18rem;">
-                    <img src="{% static "img/project1.svg" %}" class="card-img-top project-pic" alt="...">
+                    <img src="{% static "img/portfolio_1.jpeg" %}" class="card-img-top project-pic rounded" alt="...">
                     <div class="card-body">
                     <h5 class="card-title pink">PORTFOLIO</h5>
                     <p class="card-text justify white">The web app you're viewing. Technologies used: Django framework, HTML, CSS and Bootstrap.</p>
-                    <a href="#" class="btn bg-pink text-center">GitHub</a>
+                    <a href="https://github.com/albionaleka/Portfolio" target="_blank" class="btn bg-pink text-center">GitHub</a>
                     </div>
                 </div>
 
@@ -140,13 +140,13 @@
 
         </div>
 
-        <a href="#" class="btn bg-pink text-center">More Projects...</a>
+        <a href="{% url 'projects' %}" class="btn bg-pink text-center">More Projects...</a>
     </div>
 </div>
 <br><br>
 
 <div class="container" id="contact">
-    <h1 class="text-center pink"><b>GET IN TOUCH</b></h1>
+    <h1 class="text-center"><b>GET IN TOUCH</b></h1>
     <br>
 
     <div class="container d-flex justify-content-center align-items-center">

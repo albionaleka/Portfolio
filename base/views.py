@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Contact
+from .models import Contact, Projects
 from django.contrib import messages
 from .forms import ContactForm
 
@@ -17,3 +17,8 @@ def home(request):
     else:
         form = ContactForm()
         return render(request, 'home.html', {'form':form})
+
+
+def projects(request):
+    projects = Projects.objects.all()
+    return render(request, 'projects.html', {'projects': projects})
