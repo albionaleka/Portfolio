@@ -6,7 +6,7 @@
     <h1 class="text-center pink"><b>PROJECTS</b></h1>
     <br>
 
-    <p class="justify spaced">Ever since I've started my journey to become a software developer, I've always been eager to make new things, so I've dedicated some of my free time to working on different projects to perfect my skills. <br> By applying the knowledge I've earned through different courses, I've been able to create a few small personal projects, that I definitely plan on expanding in the future. Here are some of them and there will definitely be more in the future.</p><br>
+    <p class="justify spaced">Ever since I've started my journey to become a software developer, I've always been eager to make new things, so I've dedicated some of my free time to working on different projects to perfect my skills. <br><br> By applying the knowledge I've earned through different courses, I've been able to create a few small personal projects, that I definitely plan on expanding in the future. Here are some of them and there will definitely be more in the future.</p><br>
 
     <div class="container text-center">
         {% if projects %}
@@ -15,7 +15,7 @@
                     <h4 class="card-header pink">{{ project.name }}</h4>
 
                     <div class="card-body">
-                        <img src="{% static 'img/' %}{{ project.image }}" class="card-img-top rounded" alt="{{ project.name }}" style="width: 50%;">
+                        <img src="{{ project.image.url }}" class="card-img-top rounded" alt="{{ project.name }}" style="width: 50%;">
                         <p class="card-text"><br>{{ project.desc }}</p>
                         <a href="{{ project.link }}" class="btn bg-pink">GitHub</a>
                     </div>

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="container">
+        <div class="rounded">
+            <h1 id="about" class="pink text-center"><b>ABOUT ME</b></h1>
+            <br>
+    
+            <p class="justify">
+                Hello! I am a first year student studying Information Technology. I am eager to learn and develop new skills in software development. I have always been fascinated by how technology can change the way people live and work. My goal is to contribute to the development of cutting-edge software solutions that help businesses achieve their goals.
+                <br><br>
+                I am proficient in using various programming languages such as Python, JavaScript, and C#. I have experience with various software development frameworks such as Django, Flask, and React.js. I am also familiar with using version control systems like Git and have experience with cloud-based development platforms like GitHub.
+                <br><br>
+                I am always looking for opportunities to learn and grow in my field. I am excited to work on projects that will contribute to the development of  software solutions.
+                <br><br>
+                I am currently seeking a new opportunity to continue my education and develop my skills in software development.
+                <br><br>
+                I am open to discussing opportunities, projects, and career growth with anyone interested in software development. Feel free to reach out to me via <a href="mailto:albionaleka@gmail.com" class="pink"><b>Email</b></a>.
+                <br><br>
+                Thanks for taking the time to read about me!
+                <br><br>
+                <span class="pink"><b>- Albiona Leka</b></span>
+                <br><br>
+                <a href="{% static "cv/Albiona_Leka.pdf" %}" class="btn justify resume" target="_blank" download>My Resume</a>
+                <a href="{% url 'projects' %}" class="btn justify resume">Projects</a>
+            </p>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <h1 class="text-center"><b>CERTIFICATES</b></h1>
+        <br>
+
+        {% if certificates %}
+            <div class="row">
+                {% for certificate in certificates %}
+
+                    <div class="col-sm-4 mb-3 mb-sm-0 d-flex justify-content-center align-items-center">
+                        <div class="card card-no-bg d-flex justify-content-center align-items-center" style="width: 18rem;">
+                            <img src="{{ certificate.image.url }}" class="card-img-top project-pic rounded" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center pink">{{ certificate.name }}</h5>
+                                <p class="card-text text-center white">{{ certificate.date }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <div class="container" id="skills">
+        <h1 class="text-center"><b>SKILLS</b></h1>
+        <br>
+    
+        <div class="row text-center">
+            <div class="col-lg-6 mb-3 mb-lg-0 padding">
+                <img src="{% static "img/comp.png" %}" alt="Woman on Computer" class="img-fluid skills-img">
+            </div>
+      
+            <div class="col-lg-6 mb-3 mb-lg-0">
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-pink" style="width: 90%"></div>
+                </div>
+                <p class="justify">HTML & CSS</p>
+                <br>
+    
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-pink" style="width: 85%"></div>
+                </div>
+                <p class="justify">Python</p>
+                <br>
+    
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-pink" style="width: 50%"></div>
+                </div>
+                <p class="justify">JavaScript</p>
+                <br>
+    
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-pink" style="width: 60%"></div>
+                </div>
+                <p class="justify">C#</p>
+                <br>
+                
+                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-pink" style="width: 70%"></div>
+                </div>
+                <p class="justify">SQL</p>
+            </div>
+          </div>
+    </div>
+    <br><br>
+</div>
+{% endblock %}

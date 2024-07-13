@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center pink"><b>CONTACT ME</b></h1>
+    <br>
+    <p class="text-center">Please don't hesitate to reach out.</p>
+    <br>
+    
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="form" id="contactForm" style="width: 60%;">
+            <form method="POST" >
+                {% csrf_token %}
+    
+                {% if form.errors %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        Your Form Has Errors
+                        {% for field in form %}
+                            {% if field.errors %}
+                                {{ field.errors }}
+                            {% endif %}
+                        {% endfor %}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endif %}
+    
+                {{ form.as_p }}
+    
+                <button type="submit" class="btn bg-pink text-center">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
