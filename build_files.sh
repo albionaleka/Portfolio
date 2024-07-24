@@ -29,6 +29,9 @@ source venv/bin/activate
 # Debug: Print the Python executable path to ensure the virtual environment is active
 echo "Using Python from: $(which python3.12)"
 
+# Upgrade pip within the virtual environment
+python3.12 -m pip install --upgrade pip
+
 # Install project dependencies
 python3.12 -m pip install -r requirements.txt
 
