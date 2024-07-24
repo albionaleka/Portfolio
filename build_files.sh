@@ -16,6 +16,9 @@ then
     curl https://bootstrap.pypa.io/get-pip.py | python3.12
 fi
 
+# Install MySQL development headers and libraries
+apt-get install -y default-libmysqlclient-dev
+
 # Debug: Verify Python and pip installation
 echo "Python version: $(python3.12 --version)"
 echo "Pip version: $(python3.12 -m pip --version)"
