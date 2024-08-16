@@ -9,24 +9,26 @@
     <p class="justify spaced">Ever since I've started my journey to become a software developer, I've always been eager to make new things, so I've dedicated some of my free time to working on different projects to perfect my skills. <br><br> By applying the knowledge I've earned through different courses, I've been able to create a few small personal projects, that I definitely plan on expanding in the future. Here are some of them and there will definitely be more in the future.</p><br>
 
     <div class="container text-center">
-        {% if projects %}
-            {% for project in projects %}
-                <div class="card card-no-bg white">
-                    <h4 class="card-header pink">{{ project.name }}</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-4 align-items-center justify-content-center">
+            {% if projects %}
+                {% for project in projects %}
+                    <div class="col">
+                        <div class="card card-no-bg white">
+                            <h4 class="card-header pink">{{ project.name }}</h4>
 
-                    <div class="card-body">
-                        <img src="{{ project.image.url }}" class="card-img-top rounded" alt="{{ project.name }}" style="width: 50%;">
-                        <p class="card-text"><br>{{ project.desc }}</p>
-                        <a href="{{ project.link }}" class="btn bg-pink">GitHub</a>
+                            <div class="card-body">
+                                <img src="{{ project.image.url }}" class="card-img-top rounded" alt="{{ project.name }}" style="width: 50%;">
+                                <p class="card-text"><br>{{ project.desc }}</p>
+                                <a href="{{ project.link }}" class="btn bg-pink">GitHub</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <br>
-                <hr>
-                <br>
-            {% endfor %}
-        {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 
+    <br><br>
     <h5>More coming soon... ;&#41;</h5>
     <a href="{% url 'home' %}" class="btn bg-pink">Home</a>
 
