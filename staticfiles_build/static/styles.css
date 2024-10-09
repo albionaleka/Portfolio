@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.round{
+    border-radius: 100%;
+}
+
+body{
+    color: #F6E8EA;
+    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pink{
+    color: #B36E88;
+}
+
+.footer-socials{
+    color: #B36E88;
+    font-size: 20px;
+    padding: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.footer-socials:hover{
+    color: #110F0F;
+    transition: 0.5s ease;
+}
+
+.big{
+    font-size: 400%;
+}
+
+.pic{
+    width: 60%;
+}
+
+a{
+    text-decoration: none;
+    color: #F6E8EA;
+}
+
+.socials:hover{
+    color: #B36E88;
+    transition: 0.5s ease;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.read:hover{
+    color: white;
+    transition: 0.5s ease;
+}
+
+.padding{
+    padding: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.about{
+    background-color: #F6E8EA;
+    color: #110F0F;
+    font-weight: 500;
+    padding: 30px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.resume{
+    background-color: #B36E88;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.bg-pink{
+    background-color: #B36E88;
+    color: white;
+}
+
+.skills-img{
+    filter: hue-rotate(60deg);
+}
+
+.bg-match{
+    background-color: #F6E8EA;
+}
+
+.card-no-bg {
+    background-color: transparent;
+    border: none;
+}
+
+.project-pic{
+    width: 60%;
+}
+
+.white{
+    color: white;
+}
